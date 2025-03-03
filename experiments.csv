@@ -1,0 +1,13 @@
+Experiment name, Short name, Surface: Landed, Surface: Splashed, Flying Low, Flying High, In Space Low, In Space High,Max Science
+Surface Sample,surfaceSample,Biome, Biome,,,,,40
+EVA Report,evaReport,Biome,Biome,Biome,Global,Biome,Global,8
+Crew Report,crewReport,Biome,Biome,Biome,Biome,Global,Global,5
+Mystery Goo Observation,mysteryGoo,Biome,Biome,Global,Biome,Global,Global,13
+Materials Study,mobileMaterialsLab,Biome,Biome,Global,Biome,Global,Global,32
+Temperature Scan,temperatureScan,Biome,Biome,Biome,Biome,Global,Global,8
+Atmospheric Pressure Scan,barometerScan,Biome,Biome,Global,Biome,Global,Global,12
+Gravity Scan,gravityScan,Biome,Biome,,,Biome,Biome,22
+Seismic Scan,seismicScan,Biome,,,,,,22
+Atmosphere Analysis,atmosphereAnalysis,Biome,,Biome,Biome,,,24
+Infrared Telescope,infraredTelescope,,,,,,Global,22
+Magnetometer Boom,magnetometerBoom,,,,,Global,Global,45

@@ -1,0 +1,73 @@
+{"Kerbol":{
+	"biomes":[],
+	"influences":{
+		"Moho":{
+			"biomes":["North Pole", "Northern Sinkhole Ridge", "Northern Sinkhole", "Highlands", "Midlands", "Minor Craters", "Central Lowlands", "Western Lowlands", "South Western Lowlands", "South Eastern Lowlands", "Canyon", "South Pole"],
+			"influences":{}
+		},
+		"Eve":{
+			"biomes":["Poles", "Lowlands", "Midlands", "Highlands", "Foothills", "Peaks", "Impact Ejecta", "Craters (Inaccesible)", "Explodium Sea", "Akatsuki Lake", "Shallows", "Crater Lake", "Western Sea", "Olympus", "Eastern Sea"],
+			"influences":{
+				"Gilly":{
+					"biomes":["Lowlands", "Midlands", "Highlands"],
+					"influences":{}
+				}
+			}
+		},
+		"Kerbin":{
+			"biomes":["Ice Caps", "Northern Ice Shelf", "Southern Ice Shelf", "Tundra", "Highlands", "Mountains", "Grasslands", "Deserts", "Badlands", "Shores", "Water"],
+			"influences":{
+				"Mun":{
+					"biomes":["Poles", "Polar Lowlands", "Highlands", "Midlands", "Lowlands", "Midland Craters", "Highland Craters", "Canyons", "East Farside Crater", "Farside Crater", "Polar Crater", "Southwest Crater", "Northwest Crater", "East Crater", "Twin Craters", "Farside Basin", "Northeast Basin"],
+					"influences":{}
+				},
+				"Minmus":{
+					"biomes":["Poles", "Lowlands", "Midlands", "Highlands", "Slopes", "Flats", "Lesser Flats", "Great Flats", "Greater Flats"],
+					"influences":{}
+				}
+			}
+		},
+		"Duna":{
+			"biomes":["Poles", "Polar Highlands", "Polar Craters", "Highlands", "Midlands", "Lowlands", "Craters", "Midland Sea", "Northeast Basin", "Southern Basin", "Northern Shelf", "Midland Canyon", "Eastern Canyon", "Western Canyon"],
+			"influences":{
+				"Ike":{
+					"biomes":["Polar Lowlands", "Midlands", "Lowlands", "Eastern Mountain Ridge", "Western Mountain Ridge", "Central Mountain Range", "South Eastern Mountain Range", "South Pole"],
+					"influences":{}
+				}
+			}
+		},
+		"Dres":{
+			"biomes":["Poles", "Highlands", "Midlands", "Ridges", "Lowlands", "Impact Craters", "Impact Ejecta", "Canyons"],
+			"influences":{}
+		},
+		"Jool":{
+			"biomes":[],
+			"influences":{
+				"Laythe":{
+					"biomes":["Poles", "Shores", "Dunes", "Crescent Bay", "The Sagen Sea", "Crater Island", "Shallows", "Crater Bay", "Degrasse Sea", "Peaks"],
+					"influences":{}
+				},
+				"Vall":{
+					"biomes":["Poles", "Highlands", "Midlands", "Lowlands", "Mountains", "Northeast Basin", "Northwest Basin", "Southern Basin", "Southern Valleys"],
+					"influences":{}
+				},
+				"Tylo":{
+					"biomes":["Highlands", "Midlands", "Lowlands", "Mara", "Minor Craters", "Gagarin Crater", "Grissom Crater", "Galileio Crater", "Tycho Crater"],
+					"influences":{}
+				},
+				"Bop":{
+					"biomes":["Poles", "Slopes", "Peaks", "Valley", "Ridges"],
+					"influences":{}
+				},
+				"Pol":{
+					"biomes":["Poles", "Lowlands", "Midlands", "Highlands"],
+					"influences":{}
+				}
+			}
+		},
+		"Eeloo":{
+			"biomes":["Poles", "Northern Glaciers", "Midlands", "Lowlands", "Ice Canyons", "Highlands", "Craters", "Fragipan", "Babbage Patch", "Southern Glaciers", "Mu Glacier"],
+			"influences":{}
+		}
+	}
+}}
