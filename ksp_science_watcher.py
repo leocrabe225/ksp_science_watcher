@@ -9,6 +9,13 @@ ID="id"
 TITLE="title"
 COLLECTED_SCIENCE="collectedScience"
 MAX_SCIENCE="maxScience"
+MULTIPLIERS="multipliers"
+SURFACE_LANDED="Surface: Landed"
+SURFACE_SPLASHED="Surface: Splashed"
+FLYING_LOW="Flying Low"
+FLYING_HIGH="Flying High"
+IN_SPACE_LOW="In Space Low"
+IN_SPACE_HIGH="In Space High"
 
 def extract_science_data(filename):
 	with open(filename, 'r', encoding='utf-8') as file:
@@ -58,11 +65,11 @@ def load_json():
 		return {}
 
 def GetBodiesRecursively(data: dict) -> list:
-	bodies = []
+	bodies = {}
 	for body in data.keys():
-		bodies.append({body:data[body][BIOMES]})
+		bodies[body] = {BIOMES:data[body][BIOMES]}
 		if (len(data[body][INFLUENCES]) != 0):
-			bodies += GetBodiesRecursively(data[body][INFLUENCES])
+			bodies = {**bodies, **GetBodiesRecursively(data[body][INFLUENCES])}
 	return bodies
 	
 
@@ -70,16 +77,31 @@ def main():
 	root = tkinter.Tk()
 	root.title("Simple Tkinter Window")
 	root.geometry("300x200")
-	
+
 	data = load_json()
 	bodies = GetBodiesRecursively(data)
-	for body in bodies:
-		print(body)
-	
-	science_results = extract_science_data("quicksave1.sfs")
 
 	with open("multipliers.csv", 'r', encoding='utf-8') as file:
 		multipliers = file.read()
+	splitMultipliers = multipliers.split("\n")
+	del splitMultipliers[0]
+	for multiplierLine in splitMultipliers:
+		splitMultiplierLine = multiplierLine.split(",")
+		bodies[splitMultiplierLine[0]][MULTIPLIERS] = {
+			SURFACE_LANDED:splitMultiplierLine[1],
+			SURFACE_SPLASHED:splitMultiplierLine[2],
+			FLYING_LOW:splitMultiplierLine[3],
+			FLYING_HIGH:splitMultiplierLine[4],
+			IN_SPACE_LOW:splitMultiplierLine[5],
+			IN_SPACE_HIGH:splitMultiplierLine[6],
+		}
+	
+	for body in bodies.keys():
+		print(body, "|||", bodies[body])
+
+	science_results = extract_science_data("quicksave1.sfs")
+
+
 
 	with open("experiments.csv", 'r', encoding='utf-8') as file:
 		experiments = file.read()
@@ -89,8 +111,8 @@ def main():
 	for expe in splitExperiments:
 		expeFields = expe.split(",")
 		science_tree[expeFields[1]] = {}
-		for body in bodies:
-			
+		for body in bodies.keys():
+			science_tree[expeFields[1]][body] = {}
 		print(expe)
 	print(science_tree)
 
